@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Admin Café</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/tables.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Página Admin Café</h1>
+            <a href="login.html" class="logout-btn">Cerrar Sesión</a>
+        </header>
+        
+        <div class="admin-layout">
+            <aside class="sidebar">
+                <nav class="menu">
+                    <div class="menu-item active">
+                        <a href="index.html">
+                            <span class="arrow">></span>
+                            Gestión de Usuarios
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="login.html">Login Admin</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="product-management.html">Gestión de Productos</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="order-config.html">Configuración de Pedidos</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="sales-reports.html">Ventas e Informes</a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <main class="content-area">
+                <div class="user-management-content">
+                    <div class="content-header">
+                        <h2>GESTIÓN DE USUARIOS</h2>
+                        <div class="search-box">
+                            <input type="text" placeholder="Buscar usuario..." class="search-input">
+                            <button class="btn btn-secondary search-btn">🔍</button>
+                        </div>
+                    </div>
+                    
+                    <div class="user-table-container">
+                        <table class="user-table">
+                            <thead>
+                                        <tr>
+                                            <th>NOMBRE</th>
+                                            <th>USUARIO</th>
+                                            <th>SALDO</th>
+                                            <th>ACCIONES</th>
+                                        </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Pepe Viyuela</td>
+                                    <td>DrWorld@gmail.com</td>
+                                    <td>
+                                        <input type="number" value="25.50" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Gerardo</td>
+                                    <td>NoSoyUnCangrejo@yahoo.com</td>
+                                    <td>
+                                        <input type="number" value="12.75" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Fran profe</td>
+                                    <td>DondeVaLaTilde@hotmail.com</td>
+                                    <td>
+                                        <input type="number" value="8.20" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Obinax</td>
+                                    <td>ObiOnTheDurums@gmail.com</td>
+                                    <td>
+                                        <input type="number" value="-234" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Fizzero</td>
+                                    <td>Tiburonnn@outlook.com</td>
+                                    <td>
+                                        <input type="number" value="3.45" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mangofresco</td>
+                                    <td>IaaaIaaaEeee@gmail.com</td>
+                                    <td>
+                                        <input type="number" value="0.00" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Panel Gestión Avanzada de Clientes -->
+                    <div class="client-management-panel">
+                        <h3>👥 Gestión Avanzada de Clientes</h3>
+                        <div class="client-action-group">
+                            <div class="client-action-item">
+                                <label for="customer-search">Buscar cliente:</label>
+                                <div class="customer-search">
+                                    <input type="text" id="customer-search" placeholder="Email o nombre" class="customer-input">
+                                    <button class="btn btn-secondary search-customer-btn">🔍 Buscar</button>
+                                </div>
+                            </div>
+                            
+                            <div class="client-action-item">
+                                <button class="btn btn-secondary quick-action-btn">📊 Ver Historial de Compras</button>
+                            </div>
+                            
+                            <!-- Recuadro de 'Gestionar Saldo' eliminado por ser redundante -->
+                            
+                            <div class="client-action-item">
+                                <button class="btn btn-secondary quick-action-btn">📧 Enviar Notificación</button>
+                            </div>
+                            
+                            <div class="client-action-item">
+                                <label>Exportar datos de clientes:</label>
+                                <div class="export-options">
+                                    <select class="export-select">
+                                        <option value="all">Todos los clientes</option>
+                                        <option value="active">Solo activos</option>
+                                        <option value="inactive">Solo inactivos</option>
+                                    </select>
+                                    <button class="btn btn-primary export-btn">📥 Exportar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        </div>
+        <footer class="site-footer">Página diseñada y realizada por NeburixCorp(tm)</footer>
+</body>
+</html>

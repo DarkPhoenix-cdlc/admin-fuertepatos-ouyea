@@ -1,0 +1,137 @@
+/* ===== TABLAS ===== */
+.table-container,
+.user-table-container {
+    overflow-x: auto;
+    margin: var(--space-lg) 0;
+}
+
+.table,
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: var(--border-width) solid var(--color-gray-light);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+}
+
+.table th,
+.table td,
+.user-table th,
+.user-table td {
+    padding: var(--space-md);
+    text-align: left;
+    border: 1px solid var(--color-gray-light);
+}
+
+.table th,
+.user-table th {
+    background-color: var(--color-cream);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-lg);
+    letter-spacing: 0.5px;
+    color: var(--color-primary);
+}
+
+.table tbody tr:nth-child(even),
+.user-table tbody tr:nth-child(even) {
+    background-color: var(--color-light);
+}
+
+.table tbody tr:hover,
+.user-table tbody tr:hover {
+    background-color: var(--color-gray-light);
+    transition: var(--transition);
+}
+
+/* ===== INPUTS ESPECIALES PARA TABLAS ===== */
+.table-input,
+.balance-input {
+    padding: var(--space-xs) 12px;
+    border: var(--border-width) solid var(--color-gray-light);
+    border-radius: 3px;
+    font-size: var(--font-size-base);
+    width: 100px;
+    text-align: right;
+    background-color: var(--color-white);
+}
+
+.table-input:focus,
+.balance-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 3px rgba(111, 78, 55, 0.3);
+}
+
+.table-input-price {
+    background-color: var(--color-cream);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    width: 120px;
+}
+
+.balance-input {
+    background-color: var(--color-cream);
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    width: 100px;
+}
+
+/* ===== BOTONES DE TABLA ===== */
+.edit-btn {
+    padding: var(--space-xs) var(--space-sm);
+    border: var(--border-width) solid var(--color-secondary);
+    border-radius: var(--border-radius);
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    transition: var(--transition);
+}
+
+.edit-btn:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+}
+
+/* ===== BÚSQUEDA EN TABLAS ===== */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.search-input {
+    padding: var(--space-sm) var(--space-md);
+    border: var(--border-width) solid var(--color-gray-light);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    width: 250px;
+    background-color: var(--color-white);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px rgba(111, 78, 55, 0.3);
+}
+
+.search-btn {
+    padding: var(--space-sm) var(--space-md);
+    border: var(--border-width) solid var(--color-primary);
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: var(--font-size-lg);
+}
+
+.search-btn:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    transform: translateY(-1px);
+}

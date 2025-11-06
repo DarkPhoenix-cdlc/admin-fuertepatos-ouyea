@@ -1,0 +1,157 @@
+/* ===== PÁGINA DE REPORTES ===== */
+
+/* Resúmenes de ventas */
+.summaries {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.summary-item {
+    background-color: var(--color-white);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-lg);
+    border: var(--border-width) solid var(--color-gray-light);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.summary-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.summary-item h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+    font-size: var(--font-size-lg);
+}
+
+.summary-value {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-success);
+    margin: var(--space-sm) 0;
+}
+
+.summary-change {
+    font-size: var(--font-size-sm);
+    margin-top: var(--space-xs);
+}
+
+.change-positive {
+    color: var(--color-success);
+}
+
+.change-negative {
+    color: var(--color-error);
+}
+
+/* Notificaciones */
+.notifications {
+    margin-bottom: var(--space-xl);
+}
+
+.notification-list {
+    display: grid;
+    gap: var(--space-md);
+}
+
+
+/* estilos para .notification-item usados en el HTML */
+.notification-item {
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    border-left: 4px solid;
+    background-color: #fff8e6; /* color neutro ligero por defecto */
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    box-shadow: var(--shadow-soft);
+}
+
+.notification-item.warning {
+    border-left-color: var(--color-warning);
+    background-color: #fff9e6; /* amarillo pálido */
+}
+
+.notification-item.alert {
+    border-left-color: var(--color-error);
+    background-color: #fff2f0; /* rojo/rosa pálido */
+}
+
+.notification-item.info {
+    border-left-color: var(--color-secondary);
+    background-color: #f0fff4; /* verde pálido */
+}
+
+.notification-icon {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+}
+
+.notification.high .notification-icon {
+    color: var(--color-error);
+}
+
+.notification.medium .notification-icon {
+    color: var(--color-warning);
+}
+
+.notification.low .notification-icon {
+    color: var(--color-success);
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-title {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-xs);
+}
+
+.notification-time {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-dark);
+}
+
+/* Paneles de acción */
+.action-panels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+}
+
+.action-panel {
+    background-color: var(--color-white);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius-lg);
+    border: var(--border-width) solid var(--color-gray-light);
+    box-shadow: var(--shadow-soft);
+}
+
+.action-panel h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.action-panel h3::before {
+    content: "📊";
+    font-size: var(--font-size-xl);
+}
+
+.action-panel .btn {
+    width: 100%;
+    margin-bottom: var(--space-sm);
+}
+
+.action-panel .btn:last-child {
+    margin-bottom: 0;
+}

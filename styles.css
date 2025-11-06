@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(rgba(111, 78, 55, 0.8), rgba(85, 107, 47, 0.8)), url('assets/minguitos-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.98);
+    border: 3px solid #6F4E37;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(111, 78, 55, 0.4);
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.app-header {
+    background: rgba(255, 255, 255, 0.98);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.coffee-icon {
+    font-size: 2.5em;
+    filter: sepia(1) saturate(2) hue-rotate(20deg);
+}
+
+.app-header h1 {
+    font-size: 2.2em;
+    color: #6F4E37;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.login-content {
+    padding: 30px;
+    background: rgba(245, 245, 220, 0.98);
+}
+
+.login-content h2 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #6F4E37;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #424242;
+    margin-bottom: 8px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    padding: 12px;
+    border: 2px solid #E0E0E0;
+    border-radius: 5px;
+    font-size: 1em;
+    background: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #6F4E37;
+    box-shadow: 0 0 5px rgba(111, 78, 55, 0.3);
+}
+
+.login-button {
+    padding: 15px 30px;
+    background: #6F4E37;
+    border: 2px solid #6F4E37;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.login-button:hover {
+    background: #556B2F;
+    border-color: #556B2F;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(111, 78, 55, 0.3);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.dashboard-link {
+    color: #6F4E37;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.dashboard-link:hover {
+    text-decoration: underline;
+    color: #556B2F;
+}
+
+/* Footer en página de login */
+.site-footer {
+    text-align: center;
+    padding: 12px 20px;
+    color: #333333;
+    background: rgba(255,255,255,0.6);
+    border-top: 1px solid #e6e6e6;
+    font-size: 0.95em;
+    margin-top: 20px;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Ajustes específicos para el footer en la página de login */
+body.login-page {
+    display: flex; /* reafirmar */
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+body.login-page .container {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body.login-page .site-footer {
+    width: 100%;
+    max-width: 400px; /* igual que .container */
+    margin-top: 16px;
+    background: rgba(245, 245, 220, 0.95);
+    color: var(--color-gray-dark, #333333);
+    border: 1px solid #e6e6e6;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        max-width: 350px;
+    }
+    
+    .app-header h1 {
+        font-size: 1.8em;
+    }
+    
+    .login-content {
+        padding: 20px;
+    }
+    
+    .login-content h2 {
+        font-size: 1.3em;
+    }
+}

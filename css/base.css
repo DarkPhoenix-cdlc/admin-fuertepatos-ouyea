@@ -1,0 +1,92 @@
+/* ===== VARIABLES CSS ===== */
+:root {
+    /* Colores principales */
+    --color-primary: #6F4E37;          /* Marrón café */
+    --color-secondary: #556B2F;        /* Verde oliva */
+    --color-accent: #FFA07A;           /* Naranja suave */
+    --color-warning: #FFD700;          /* Amarillo mostaza */
+    --color-danger: #D2691E;           /* Rojo terracota */
+    --color-success: #228B22;          /* Verde bosque */
+    --color-error: #DC143C;            /* Carmesí */
+    
+    /* Colores neutros */
+    --color-white: #FFFFFF;
+    --color-light: #F5F5F5;
+    --color-cream: #F5F5DC;
+    --color-gray-light: #E0E0E0;
+    --color-gray: #424242;
+    --color-gray-dark: #343A40;
+    --color-text: #424242;
+    --color-background: #F5F5F5;
+    
+    /* Espaciado */
+    --space-xs: 5px;
+    --space-sm: 10px;
+    --space-md: 15px;
+    --space-lg: 20px;
+    --space-xl: 30px;
+    
+    /* Bordes */
+    --border-width: 2px;
+    --border-radius: 5px;
+    --border-radius-lg: 8px;
+    
+    /* Sombras */
+    --shadow-soft: 0 2px 4px rgba(111, 78, 55, 0.1);
+    --shadow-sm: 0 2px 4px rgba(111, 78, 55, 0.1);
+    --shadow-md: 0 2px 8px rgba(111, 78, 55, 0.1);
+    --shadow-lg: 0 4px 8px rgba(111, 78, 55, 0.15);
+    --shadow-hover: 0 4px 12px rgba(111, 78, 55, 0.2);
+    
+    /* Transiciones */
+    --transition: all 0.3s ease;
+    
+    /* Tipografía */
+    --font-family: 'Arial', sans-serif;
+    --font-size-sm: 0.9em;
+    --font-size-base: 1em;
+    --font-size-lg: 1.1em;
+    --font-size-xl: 1.3em;
+    --font-size-xxl: 1.8em;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+    --line-height: 1.5;
+}
+
+/* ===== RESET Y BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-light);
+    color: var(--color-gray);
+    line-height: 1.5;
+}
+
+/* ===== UTILIDADES ===== */
+.text-center { text-align: center; }
+.text-bold { font-weight: var(--font-weight-bold); }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.p-sm { padding: var(--space-sm); }
+.p-md { padding: var(--space-md); }
+.p-lg { padding: var(--space-lg); }
+
+/* ===== TRANSICIONES GLOBALES ===== */
+button, input, select, textarea, .menu-item a {
+    transition: var(--transition);
+}
+
+/* ===== EFECTOS HOVER GLOBALES ===== */
+.hover-lift:hover {
+    transform: translateY(-2px);
+}
+
+.hover-shadow:hover {
+    box-shadow: var(--shadow-lg);
+}
