@@ -253,6 +253,25 @@ body {
     transform: translateY(-1px);
 }
 
+.remove-btn {
+    padding: 8px 16px;
+    border: 2px solid #FFA07A;
+    border-radius: 3px;
+    background-color: #d82525;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+
+.remove-btn:hover {
+    background-color: #fd6d06;
+    border-color: #D2691E;
+    transform: translateY(-1px);
+}
+
 /* Client Management Panel Styles */
 .client-management-panel {
     margin-top: 30px;
