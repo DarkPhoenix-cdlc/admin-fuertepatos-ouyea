@@ -1,4 +1,4 @@
-/* ===== PÁGINA DE PRODUCTOS ===== */
+/* ===== PÁGINA DE CATEGORÍAS ===== */
 
 .product-grid {
     display: grid;
@@ -76,7 +76,6 @@
     font-size: var(--font-size-sm);
 }
 
-/* Categorías de productos */
 .product-categories {
     display: flex;
     gap: var(--space-sm);
@@ -101,7 +100,6 @@
     border-color: var(--color-primary);
 }
 
-/* Formulario de nuevo producto */
 .add-product-form {
     background-color: var(--color-light);
     padding: var(--space-lg);
