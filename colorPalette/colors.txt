@@ -1,0 +1,19 @@
+Nota: todos los colores son con la representacion HEX
+
+Espresso Brown (Marron oscuro): HEX: #623F32
+
+Cafe Cream (Beige pastel): #F0DEBB
+
+Terracota tile (Naranja oscuro): #D36946
+
+Boss gold (Dorado oscuro): #BE9857
+
+Verde Oscuro: #303B1B
+
+Naranja claro: #BF754B
+
+Marron: #99542B
+
+Marron Claro: #C3885C
+
+Nota: no hay que usar estos colores solo, se pueden usar mas pero tendrian que ser principales o añadir mas patrones.
