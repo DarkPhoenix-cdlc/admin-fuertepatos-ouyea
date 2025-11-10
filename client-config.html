@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Admin - Configuración de Clientes</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/config.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Página Admin Café</h1>
+            <a href="login.html" class="logout-btn">Cerrar Sesión</a>
+        </header>
+        
+        <div class="admin-layout">
+            <aside class="sidebar">
+                <nav class="menu">
+                    <div class="menu-item">
+                        <a href="index.html">Gestión de Usuarios</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="login.html">Login Admin</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="product-management.html">Gestión de Productos</a>
+                    </div>
+                    <div class="menu-item has-submenu active">
+                        <a href="#">Configuración</a>
+                        <div class="submenu">
+                            <div class="menu-item active">
+                                <a href="client-config.html">Config. Clientes</a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="admin-config.html">Config. Admin</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <a href="sales-reports.html">Ventas e Informes</a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <main class="content-area">
+                <div class="config-content">
+                    <div class="content-header">
+                        <h2>CONFIGURACIÓN DE CLIENTES</h2>
+                    </div>
+                    
+                    <div class="config-sections">
+                        <div class="config-section">
+                            <div class="config-group">
+                                <div class="config-item">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="takeaway-default" checked>
+                                        <span class="checkmark"></span>
+                                        Pedidos para llevar por defecto
+                                    </label>
+                                </div>
+                                
+                                <div class="config-item">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="negative-balance">
+                                        <span class="checkmark"></span>
+                                        Permitir saldos negativos
+                                    </label>
+                                </div>
+                                
+                                <div class="config-item">
+                                    <label for="order-limit">Límite de pedidos simultáneos:</label>
+                                    <input type="number" id="order-limit" value="3" min="1" max="10" class="config-input">
+                                </div>
+                                
+                                <div class="config-item">
+                                    <label for="post-order-message">Mensaje personalizado post pedido:</label>
+                                    <textarea id="post-order-message" class="config-textarea" rows="3" placeholder="Gracias por su pedido. Le avisaremos cuando esté listo."></textarea>
+                                </div>
+                                
+                                <div class="config-item">
+                                    <label for="stock-limit">Desactivar productos por debajo de stock:</label>
+                                    <input type="number" id="stock-limit" value="5" min="0" max="50" class="config-input">
+                                    <span class="unit">unidades</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="config-actions">
+                        <button class="btn btn-primary save-btn">Guardar Cambios</button>
+                        <button class="btn btn-secondary reset-btn">Restablecer</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <footer class="site-footer">Página diseñada y realizada por NeburixCorp(tm)</footer>
+</body>
+</html>
