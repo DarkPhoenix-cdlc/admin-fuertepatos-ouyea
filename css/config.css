@@ -88,6 +88,12 @@
     border-bottom: none;
 }
 
+.input-with-unit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .config-label {
     flex: 1;
     margin-right: var(--space-md);
