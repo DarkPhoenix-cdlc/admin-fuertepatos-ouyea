@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,14 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/reports.css">
 </head>
+
 <body>
     <div class="admin-container">
         <header class="admin-header">
             <h1>Página Admin Café</h1>
             <a href="login.html" class="logout-btn">Cerrar Sesión</a>
         </header>
-        
+
         <div class="admin-layout">
             <aside class="sidebar">
                 <nav class="menu">
@@ -47,14 +49,14 @@
                     </div>
                 </nav>
             </aside>
-            
+
             <main class="content-area">
                 <div class="reports-content">
                     <!-- Botón Actualizar Vista -->
                     <div class="update-section">
                         <button class="btn btn-secondary update-btn">🔄 Actualizar Vista</button>
                     </div>
-                    
+
                     <!-- Panel Resumen del Día -->
                     <div class="summary-panel">
                         <h3>📊 Resumen Actual del Día</h3>
@@ -85,14 +87,15 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Panel de Notificaciones -->
                     <div class="notifications-panel">
                         <h3>🔔 Notificaciones</h3>
                         <div class="notification-list">
                             <div class="notification-item warning">
                                 <span class="notification-icon">⚠️</span>
-                                <span class="notification-text">Stock bajo en: Café (3 unidades), Magdalenas (1 unidad)</span>
+                                <span class="notification-text">Stock bajo en: Café (3 unidades), Magdalenas (1
+                                    unidad)</span>
                             </div>
                             <div class="notification-item alert">
                                 <span class="notification-icon">🕐</span>
@@ -104,7 +107,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="action-panels">
                         <!-- Panel Acciones Rápidas -->
                         <div class="action-panel">
@@ -112,44 +115,52 @@
                             <div class="action-group">
                                 <div class="action-item">
                                     <label>Exportar informe de:</label>
+
                                     <div class="date-range">
-                                        <input type="date" class="date-input" value="2025-10-27">
-                                        <span>hasta</span>
-                                        <input type="date" class="date-input" value="2025-10-27">
+                                        <div class="date-range-row">
+                                            <input type="date" class="date-input" value="2025-10-27">
+                                            <span>hasta</span>
+                                            <input type="date" class="date-input" value="2025-10-27">
+                                        </div>
+
                                         <button class="btn btn-primary export-btn">📁 Exportar</button>
                                     </div>
                                 </div>
-                                
+
                                 <div class="action-item">
-                                    <button class="btn btn-success quick-action-btn">📅 Programar Informe Automático</button>
+                                    <button class="btn btn-success quick-action-btn">📅 Programar Informe
+                                        Automático</button>
                                 </div>
-                                
+
+
                                 <div class="action-item">
                                     <label for="order-detail">Ver detalle de pedido:</label>
                                     <div class="order-search">
-                                        <input type="text" id="order-detail" placeholder="ID del pedido" class="order-input">
+                                        <input type="text" id="order-detail" placeholder="ID del pedido"
+                                            class="order-input">
                                         <button class="btn btn-secondary search-order-btn">👁️ Ver</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Panel Análisis de Ventas -->
                         <div class="action-panel">
                             <h3>📈 Análisis de Ventas</h3>
                             <div class="action-group">
                                 <div class="action-item">
-                                    <button class="btn btn-secondary quick-action-btn">📊 Ver Tendencias de Productos</button>
+                                    <button class="btn btn-secondary quick-action-btn">📊 Ver Tendencias de
+                                        Productos</button>
                                 </div>
-                                
+
                                 <div class="action-item">
                                     <button class="btn btn-secondary quick-action-btn">🧭 Comparar Períodos</button>
                                 </div>
-                                
+
                                 <div class="action-item">
                                     <button class="btn btn-secondary quick-action-btn">🎯 Metas de Ventas</button>
                                 </div>
-                                
+
                                 <div class="action-item">
                                     <label>Generar reporte de:</label>
                                     <div class="export-options">
@@ -168,7 +179,8 @@
                 </div>
             </main>
         </div>
-        </div>
-        <footer class="site-footer">Página diseñada y realizada por NeburixCorp(tm)</footer>
+    </div>
+    <footer class="site-footer">Página diseñada y realizada por NeburixCorp(tm)</footer>
 </body>
+
 </html>
