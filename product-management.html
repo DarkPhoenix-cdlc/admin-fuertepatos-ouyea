@@ -64,7 +64,6 @@
                         <table class="user-table">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>NOMBRE</th>
                                     <th>PRECIO</th>
                                     <th>CATEGORÍA</th>
@@ -73,53 +72,48 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td></td>
                                     <td>Café</td>
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Bebidas calientes</td>
                                     <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-cafe" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
                                     <td>Té</td>
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Bebidas calientes</td>
                                     <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-te" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
                                     <td>Tarta</td>
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Varios</td>
                                     <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-tarta" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
                                     <td>Croissant</td>
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Croissants</td>
                                     <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-croissant" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
                                     <td>Magdalena</td>
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Varios</td>
                                     <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-magdalena" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -127,6 +121,56 @@
                     </div>
                 </div>
             </main>
+        </div>
+    </div>
+    <div id="delete-cafe" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Café”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    <div id="delete-te" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Té”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    <div id="delete-tarta" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Tarta”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    <div id="delete-croissant" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Croissant”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    <div id="delete-magdalena" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Magdalena”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
         </div>
     </div>
     
