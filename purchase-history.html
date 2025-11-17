@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/tables.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -45,10 +46,10 @@
             <main class="content-area">
                 <div class="user-management-content">
                     <div class="content-header">
-                        <h2>GESTIÓN DE USUARIOS</h2>
+                        <h2>HISTORIAL DE COMPRAS DE PEPE VIYUELA</h2>
                         <div class="search-box">
-                            <button class="btn btn-secondary search-btn">Crear Usuario</button>
-                            <input type="text" placeholder="Buscar usuario..." class="search-input">
+                            <button class="btn btn-secondary search-btn">Crear Compra</button>
+                            <input type="text" placeholder="Buscar compra..." class="search-input">
                             <button class="btn btn-secondary search-btn">🔍</button>
                         </div>
                     </div>
@@ -57,95 +58,125 @@
                         <table class="user-table">
                             <thead>
                                 <tr>
-                                    <th>NOMBRE</th>
-                                    <th>USUARIO</th>
-                                    <th>SALDO</th>
+                                    <th>TIPO</th>
+                                    <th>PRODUCTOS COMPRADOS</th>
+                                    <th>PRECIO TOTAL</th>
+                                    <th>FECHA</th>
                                     <th>ACCIONES</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Pepe Viyuela</td>
-                                    <td>DrWorld@gmail.com</td>
+                                    <td>Compra</td>
                                     <td>
-                                        <input type="number" value="25.50" class="balance-input" step="0.01">€
+                                        <ul>
+                                            <li>Croissant - 1€</li>
+                                            <li>Agua 500ML x2 - 1€</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <input type="number" value="7.77" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>
+                                        <input type="date" value="2025-01-01"/>
                                     </td>
                                     <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
                                         <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                        <a href="purchase-history.html">
-                                            <button class="btn btn-sm btn-primary">VER SALDO</button>
-                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Gerardo</td>
-                                    <td>NoSoyUnCangrejo@yahoo.com</td>
+                                    <td>Compra</td>
+                                    <td>
+                                        <ul>
+                                            <li>Bocadillo Pollo - 1€</li>
+                                            <li>Kinder Bueno Blanco - 1,20€</li>
+                                        </ul>
+                                    </td>
                                     <td>
                                         <input type="number" value="12.75" class="balance-input" step="0.01">€
                                     </td>
                                     <td>
+                                        <input type="date" value="2025-01-01"/>
+                                    </td>
+                                    <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
                                         <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                        <a href="purchase-history.html">
-                                            <button class="btn btn-sm btn-primary">VER SALDO</button>
-                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Fran profe</td>
-                                    <td>DondeVaLaTilde@hotmail.com</td>
+                                    <td>Compra</td>
+                                    <td>
+                                        <ul>
+                                            <li>Bocadillo Lomo - 1€</li>
+                                        </ul>
+                                    </td>
                                     <td>
                                         <input type="number" value="8.20" class="balance-input" step="0.01">€
                                     </td>
                                     <td>
+                                        <input type="date" value="2025-01-01"/>
+                                    </td>
+                                    <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
                                         <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                        <a href="purchase-history.html">
-                                            <button class="btn btn-sm btn-primary">VER SALDO</button>
-                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Obinax</td>
-                                    <td>ObiOnTheDurums@gmail.com</td>
+                                    <td>Compra</td>
+                                    <td>
+                                        <ul>
+                                            <li>Café Corto - 1€</li>
+                                            <li>Millos Grefusa - 1€</li>
+                                            <li>Sándwich Mixto - 1,50€</li>
+                                        </ul>
+                                    </td>
                                     <td>
                                         <input type="number" value="-234" class="balance-input" step="0.01">€
                                     </td>
                                     <td>
+                                        <input type="date" value="2025-01-01"/>
+                                    </td>
+                                    <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
                                         <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                        <a href="purchase-history.html">
-                                            <button class="btn btn-sm btn-primary">VER SALDO</button>
-                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Fizzero</td>
-                                    <td>Tiburonnn@outlook.com</td>
+                                    <td>Compra</td>
+                                    <td>
+                                        <ul>
+                                            <li>Café Largo - 1€</li>
+                                        </ul>
+                                    </td>
                                     <td>
                                         <input type="number" value="3.45" class="balance-input" step="0.01">€
                                     </td>
                                     <td>
+                                        <input type="date" value="2025-01-01"/>
+                                    </td>
+                                    <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
                                         <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                        <a href="purchase-history.html">
-                                            <button class="btn btn-sm btn-primary">VER SALDO</button>
-                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Mangofresco</td>
-                                    <td>IaaaIaaaEeee@gmail.com</td>
+                                    <td>Compra</td>
                                     <td>
-                                        <input type="number" value="0.00" class="balance-input" step="0.01">€
+                                        <ul>
+                                            <li>Cola-Cao - 1€</li>
+                                            <li>Galletas Príncipe - 0,50€</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <input type="number" value="5.13" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>
+                                        <input type="date" value="2025-01-01"/>
                                     </td>
                                     <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
                                         <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                        <a href="purchase-history.html">
-                                            <button class="btn btn-sm btn-primary">VER SALDO</button>
-                                        </a>
                                     </td>
                                 </tr>
                             </tbody>
