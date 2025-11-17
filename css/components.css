@@ -97,6 +97,62 @@
     font-size: var(--font-size-sm);
 }
 
+.config-input,
+.config-select,
+.config-textarea,
+.config-time,
+.date-input,
+#order-detail {
+    border: 2px solid #E0E0E0;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #FFFFFF;
+    max-width: 300px;
+}
+
+.config-time,
+.config-input,
+.date-input,
+#order-detail{
+    height: 30px;
+    resize: vertical
+}
+
+.config-input,
+#order-detail{
+    padding-left: 10px;
+}
+
+.config-select,
+.config-textarea{
+    padding: 10px 12px;
+}
+
+.config-select{
+    height: 40px;
+}
+
+.config-textarea{
+    height: 70px;
+}
+
+.config-input:focus,
+.config-select:focus,
+.config-textarea:focus,
+.config-time:focus,
+.date-input:focus,
+#order-detail:focus {
+    outline: none;
+    border-color: #6F4E37;
+    box-shadow: 0 0 5px rgba(111, 78, 55, 0.3);
+}
+
+.config-textarea {
+    resize: vertical;
+    max-width: 500px;
+    font-family: Arial, sans-serif;
+}
+
 /* ===== CHECKBOXES PERSONALIZADOS ===== */
 .checkbox-custom {
     display: flex;

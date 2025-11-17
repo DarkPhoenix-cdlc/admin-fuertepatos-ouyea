@@ -133,6 +133,26 @@
     box-shadow: var(--shadow-soft);
 }
 
+.date-range {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.date-range-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.export-btn {
+    width: 100%;
+}
+
+.action-item {
+    margin-bottom: 16px;
+}
+
 .action-panel h3 {
     color: var(--color-primary);
     margin-bottom: var(--space-md);
@@ -154,4 +174,14 @@
 
 .action-panel .btn:last-child {
     margin-bottom: 0;
+}
+
+.order-search {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-order-btn {
+    width: 100%;
 }

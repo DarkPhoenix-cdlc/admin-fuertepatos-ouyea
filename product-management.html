@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/tables.css">
 </head>
 <body>
     <div class="admin-container">
@@ -22,9 +23,6 @@
                     <div class="menu-item">
                         <a href="index.html">Gestión de Usuarios</a>
                     </div>
-                    <div class="menu-item">
-                        <a href="login.html">Login Admin</a>
-                    </div>
                     <div class="menu-item active">
                         <a href="product-management.html">
                             <span class="arrow">></span>
@@ -32,71 +30,152 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="order-config.html">Configuración de Pedidos</a>
+                        <a href="category-management.html">Gestión de Categorías</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#">Configuración</a>
+                        <div class="submenu">
+                            <div class="menu-item">
+                                <a href="client-config.html">Config. Clientes</a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="admin-config.html">Config. Admin</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="menu-item">
                         <a href="sales-reports.html">Ventas e Informes</a>
                     </div>
                 </nav>
             </aside>
-            
+
             <main class="content-area">
-                <div class="product-management-content">
+                <div class="user-management-content">
                     <div class="content-header">
                         <h2>GESTIÓN DE PRODUCTOS</h2>
-                        <button class="btn btn-primary add-product-btn">+ Añadir Producto</button>
+                        <div class="search-box">
+                            <button class="btn btn-secondary search-btn">Añadir Producto</button>
+                            <input type="text" placeholder="Buscar producto..." class="search-input">
+                            <button class="btn btn-secondary search-btn">🔍</button>
+                        </div>
                     </div>
                     
-                    <div class="product-list">
-                        <div class="product-item">
-                            <div class="product-icon">☕</div>
-                            <div class="product-info">
-                                <span class="product-name">Café</span>
-                                <input type="text" value="XX.XX€" class="product-price">
-                            </div>
-                            <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                        </div>
-                        
-                        <div class="product-item">
-                            <div class="product-icon">🍵</div>
-                            <div class="product-info">
-                                <span class="product-name">Té</span>
-                                <input type="text" value="XX.XX€" class="product-price">
-                            </div>
-                            <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                        </div>
-                        
-                        <div class="product-item">
-                            <div class="product-icon">🍰</div>
-                            <div class="product-info">
-                                <span class="product-name">Tarta</span>
-                                <input type="text" value="XX.XX€" class="product-price">
-                            </div>
-                            <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                        </div>
-                        
-                        <div class="product-item">
-                            <div class="product-icon">🥐</div>
-                            <div class="product-info">
-                                <span class="product-name">Croissant</span>
-                                <input type="text" value="XX.XX€" class="product-price">
-                            </div>
-                            <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                        </div>
-                        
-                        <div class="product-item">
-                            <div class="product-icon">🧁</div>
-                            <div class="product-info">
-                                <span class="product-name">Magdalena</span>
-                                <input type="text" value="XX.XX€ " class="product-price">
-                            </div>
-                            <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                        </div>
+                    <div class="user-table-container">
+                        <table class="user-table">
+                            <thead>
+                                <tr>
+                                    <th>NOMBRE</th>
+                                    <th>PRECIO</th>
+                                    <th>CATEGORÍA</th>
+                                    <th>ACCIONES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Café</td>
+                                    <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
+                                    <td>Bebidas calientes</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-cafe" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Té</td>
+                                    <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
+                                    <td>Bebidas calientes</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-te" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Tarta</td>
+                                    <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
+                                    <td>Varios</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-tarta" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Croissant</td>
+                                    <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
+                                    <td>Croissants</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-croissant" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Magdalena</td>
+                                    <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
+                                    <td>Varios</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-magdalena" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </main>
         </div>
+    </div>
+    <div id="delete-cafe" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Café”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
         </div>
-        <footer class="site-footer">Página diseñada y realizada por NeburixCorp(tm)</footer>
+    </div>
+    <div id="delete-te" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Té”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    <div id="delete-tarta" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Tarta”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    <div id="delete-croissant" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Croissant”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    <div id="delete-magdalena" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Magdalena”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="site-footer">
+        Página diseñada y realizada por NeburixCorp(tm)
+    </footer>
 </body>
 </html>
