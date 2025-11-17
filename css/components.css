@@ -100,7 +100,9 @@
 .config-input,
 .config-select,
 .config-textarea,
-.config-time {
+.config-time,
+.date-input,
+#order-detail {
     border: 2px solid #E0E0E0;
     border-radius: 5px;
     font-size: 1em;
@@ -109,12 +111,15 @@
 }
 
 .config-time,
-.config-input{
+.config-input,
+.date-input,
+#order-detail{
     height: 30px;
     resize: vertical
 }
 
-.config-input{
+.config-input,
+#order-detail{
     padding-left: 10px;
 }
 
@@ -134,7 +139,9 @@
 .config-input:focus,
 .config-select:focus,
 .config-textarea:focus,
-.config-time:focus {
+.config-time:focus,
+.date-input:focus,
+#order-detail:focus {
     outline: none;
     border-color: #6F4E37;
     box-shadow: 0 0 5px rgba(111, 78, 55, 0.3);
