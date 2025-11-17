@@ -1,192 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Admin Café</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/tables.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historial de Compras</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/tables.css">
 </head>
-
 <body>
-    <div class="admin-container">
-        <header class="admin-header">
-            <h1>Página Admin Café</h1>
-            <a href="login.html" class="logout-btn">Cerrar Sesión</a>
-        </header>
+<div class="admin-container">
+    <header class="admin-header">
+        <h1 id="tituloHistorial">Historial de Compras</h1>
+        <a href="#" onclick="window.close()">Cerrar Ventana</a>
+    </header>
 
-        <div class="admin-layout">
-            <aside class="sidebar">
-                <nav class="menu">
-                    <div class="menu-item active">
-                        <a href="index.html">
-                            <span class="arrow">></span>
-                            Gestión de Usuarios
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="login.html">Login Admin</a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="product-management.html">Gestión de Productos</a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="order-config.html">Configuración de Pedidos</a>
-                    </div>
-                    <div class="menu-item">
-                        <a href="sales-reports.html">Ventas e Informes</a>
-                    </div>
-                </nav>
-            </aside>
-
-            <main class="content-area">
-                <div class="user-management-content">
-                    <div class="content-header">
-                        <h2>HISTORIAL DE COMPRAS DE PEPE VIYUELA</h2>
-                        <div class="search-box">
-                            <button class="btn btn-secondary search-btn">Crear Compra</button>
-                            <input type="text" placeholder="Buscar compra..." class="search-input">
-                            <button class="btn btn-secondary search-btn">🔍</button>
-                        </div>
-                    </div>
-
-                    <div class="user-table-container">
-                        <table class="user-table">
-                            <thead>
-                                <tr>
-                                    <th>TIPO</th>
-                                    <th>PRODUCTOS COMPRADOS</th>
-                                    <th>PRECIO TOTAL</th>
-                                    <th>FECHA</th>
-                                    <th>ACCIONES</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Compra</td>
-                                    <td>
-                                        <ul>
-                                            <li>Croissant - 1€</li>
-                                            <li>Agua 500ML x2 - 1€</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <input type="number" value="7.77" class="balance-input" step="0.01">€
-                                    </td>
-                                    <td>
-                                        <input type="date" value="2025-01-01"/>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Compra</td>
-                                    <td>
-                                        <ul>
-                                            <li>Bocadillo Pollo - 1€</li>
-                                            <li>Kinder Bueno Blanco - 1,20€</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <input type="number" value="12.75" class="balance-input" step="0.01">€
-                                    </td>
-                                    <td>
-                                        <input type="date" value="2025-01-01"/>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Compra</td>
-                                    <td>
-                                        <ul>
-                                            <li>Bocadillo Lomo - 1€</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <input type="number" value="8.20" class="balance-input" step="0.01">€
-                                    </td>
-                                    <td>
-                                        <input type="date" value="2025-01-01"/>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Compra</td>
-                                    <td>
-                                        <ul>
-                                            <li>Café Corto - 1€</li>
-                                            <li>Millos Grefusa - 1€</li>
-                                            <li>Sándwich Mixto - 1,50€</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <input type="number" value="-234" class="balance-input" step="0.01">€
-                                    </td>
-                                    <td>
-                                        <input type="date" value="2025-01-01"/>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Compra</td>
-                                    <td>
-                                        <ul>
-                                            <li>Café Largo - 1€</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <input type="number" value="3.45" class="balance-input" step="0.01">€
-                                    </td>
-                                    <td>
-                                        <input type="date" value="2025-01-01"/>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Compra</td>
-                                    <td>
-                                        <ul>
-                                            <li>Cola-Cao - 1€</li>
-                                            <li>Galletas Príncipe - 0,50€</li>
-                                        </ul>
-                                    </td>
-                                    <td>
-                                        <input type="number" value="5.13" class="balance-input" step="0.01">€
-                                    </td>
-                                    <td>
-                                        <input type="date" value="2025-01-01"/>
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </main>
+    <main class="content-area">
+        <div class="user-table-container">
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>TIPO</th>
+                        <th>PRODUCTOS COMPRADOS</th>
+                        <th>PRECIO TOTAL</th>
+                        <th>FECHA</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaHistorial">
+                    <!-- Aquí se agregan las filas dinámicamente -->
+                </tbody>
+            </table>
         </div>
-    </div>
-    <footer class="site-footer">Página diseñada y realizada por NeburixCorp(tm)</footer>
-</body>
+    </main>
 
+    <footer class="site-footer">Página diseñada y realizada por NeburixCorp(tm)</footer>
+</div>
+
+<script>
+// Obtener el parámetro "usuario" de la URL
+const params = new URLSearchParams(window.location.search);
+const usuario = params.get('usuario') || 'Usuario';
+
+// Cambiar título
+document.getElementById('tituloHistorial').innerText = 'Historial de Compras — ' + usuario;
+
+// Datos de ejemplo (puedes reemplazar por los reales)
+const compras = [
+    {tipo:'Compra', productos:['Croissant - 1€','Agua 500ML x2 - 1€'], precio:'7.77€', fecha:'2025-01-01'},
+    {tipo:'Compra', productos:['Bocadillo Pollo - 1€','Kinder Bueno Blanco - 1,20€'], precio:'12.75€', fecha:'2025-01-01'},
+    {tipo:'Compra', productos:['Bocadillo Lomo - 1€'], precio:'8.20€', fecha:'2025-01-01'},
+    {tipo:'Compra', productos:['Café Corto - 1€','Millos Grefusa - 1€','Sándwich Mixto - 1,50€'], precio:'-234€', fecha:'2025-01-01'},
+    {tipo:'Compra', productos:['Café Largo - 1€'], precio:'3.45€', fecha:'2025-01-01'},
+    {tipo:'Compra', productos:['Cola-Cao - 1€','Galletas Príncipe - 0,50€'], precio:'5.13€', fecha:'2025-01-01'}
+];
+
+// Llenar la tabla
+const tabla = document.getElementById('tablaHistorial');
+compras.forEach(c => {
+    const tr = document.createElement('tr');
+    const productosHTML = '<ul>' + c.productos.map(p => `<li>${p}</li>`).join('') + '</ul>';
+    tr.innerHTML = `<td>${c.tipo}</td><td>${productosHTML}</td><td>${c.precio}</td><td>${c.fecha}</td>`;
+    tabla.appendChild(tr);
+});
+</script>
+
+</body>
 </html>
