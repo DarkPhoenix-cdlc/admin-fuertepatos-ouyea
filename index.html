@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/tables.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -75,64 +76,19 @@
                                 <tr>
                                     <td>Pepe Viyuela</td>
                                     <td>DrWorld@gmail.com</td>
-                                    <td>
-                                        <input type="number" value="25.50" class="balance-input" step="0.01">€
-                                    </td>
+                                    <td><button class="btn btn-sm btn-primary"
+                                            onclick="abrirHistorial('Pepe Viyuela')">11,24€</button></td>
                                     <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
                                         <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Gerardo</td>
                                     <td>NoSoyUnCangrejo@yahoo.com</td>
-                                    <td>
-                                        <input type="number" value="12.75" class="balance-input" step="0.01">€
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Fran profe</td>
-                                    <td>DondeVaLaTilde@hotmail.com</td>
-                                    <td>
-                                        <input type="number" value="8.20" class="balance-input" step="0.01">€
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Obinax</td>
-                                    <td>ObiOnTheDurums@gmail.com</td>
-                                    <td>
-                                        <input type="number" value="-234" class="balance-input" step="0.01">€
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Fizzero</td>
-                                    <td>Tiburonnn@outlook.com</td>
-                                    <td>
-                                        <input type="number" value="3.45" class="balance-input" step="0.01">€
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Mangofresco</td>
-                                    <td>IaaaIaaaEeee@gmail.com</td>
-                                    <td>
-                                        <input type="number" value="0.00" class="balance-input" step="0.01">€
-                                    </td>
+                                    <td><button class="btn btn-sm btn-primary" onclick="abrirHistorial('Gerardo')">3,77€
+                                            </button></td>
                                     <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
                                         <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
@@ -145,7 +101,16 @@
             </main>
         </div>
     </div>
+
     <footer class="site-footer">Página diseñada y realizada por NeburixCorp(tm)</footer>
+
+    <script>
+        function abrirHistorial(usuario) {
+            // Abrimos purchase-history.html pasando el usuario como parámetro
+            window.open('purchase-history.html?usuario=' + encodeURIComponent(usuario), '_blank', 'width=1000,height=800,scrollbars=yes');
+        }
+    </script>
+
 </body>
 
 </html>
