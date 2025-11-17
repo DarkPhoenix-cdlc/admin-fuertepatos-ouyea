@@ -276,7 +276,7 @@ body {
     padding: 8px 16px;
     border: 2px solid #FFA07A;
     border-radius: 3px;
-    background-color: #d82525;
+    background-color: #d82525 !important;;
     color: #FFFFFF;
     font-weight: bold;
     cursor: pointer;
