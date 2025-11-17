@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/tables.css">
 </head>
 <body>
     <div class="admin-container">
@@ -49,59 +50,92 @@
                     </div>
                 </nav>
             </aside>
-            
+
             <main class="content-area">
-                <div class="product-management-content">
+                <div class="user-management-content">
                     <div class="content-header">
                         <h2>GESTIÓN DE PRODUCTOS</h2>
-                        <button class="btn btn-primary add-product-btn">+ Añadir Producto</button>
+                        <div class="search-box">
+                            <button class="btn btn-secondary search-btn">Añadir Producto</button>
+                            <input type="text" placeholder="Buscar producto..." class="search-input">
+                            <button class="btn btn-secondary search-btn">🔍</button>
+                        </div>
                     </div>
                     
-                    <div class="product-list">
-                        <div class="product-item">
-                            <div class="product-icon">☕</div>
-                            <div class="product-info">
-                                <span class="product-name">Café</span>
-                                <input type="text" value="XX.XX€" class="product-price">
-                            </div>
-                            <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                        </div>
-                        
-                        <div class="product-item">
-                            <div class="product-icon">🍵</div>
-                            <div class="product-info">
-                                <span class="product-name">Té</span>
-                                <input type="text" value="XX.XX€" class="product-price">
-                            </div>
-                            <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                        </div>
-                        
-                        <div class="product-item">
-                            <div class="product-icon">🍰</div>
-                            <div class="product-info">
-                                <span class="product-name">Tarta</span>
-                                <input type="text" value="XX.XX€" class="product-price">
-                            </div>
-                            <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                        </div>
-                        
-                        <div class="product-item">
-                            <div class="product-icon">🥐</div>
-                            <div class="product-info">
-                                <span class="product-name">Croissant</span>
-                                <input type="text" value="XX.XX€" class="product-price">
-                            </div>
-                            <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                        </div>
-                        
-                        <div class="product-item">
-                            <div class="product-icon">🧁</div>
-                            <div class="product-info">
-                                <span class="product-name">Magdalena</span>
-                                <input type="text" value="XX.XX€ " class="product-price">
-                            </div>
-                            <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                        </div>
+                    <div class="user-table-container">
+                        <table class="user-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>NOMBRE</th>
+                                    <th>PRECIO</th>
+                                    <th>CATEGORÍA</th>
+                                    <th>ACCIONES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>Café</td>
+                                    <td>
+                                        <input type="number" value="1.50" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>Bebidas calientes</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Té</td>
+                                    <td>
+                                        <input type="number" value="1.50" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>Bebidas calientes</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Tarta</td>
+                                    <td>
+                                        <input type="number" value="1.50" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>Varios</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Croissant</td>
+                                    <td>
+                                        <input type="number" value="1.50" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>Croissants</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Magdalena</td>
+                                    <td>
+                                        <input type="number" value="1.50" class="balance-input" step="0.01">€
+                                    </td>
+                                    <td>Varios</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </main>
