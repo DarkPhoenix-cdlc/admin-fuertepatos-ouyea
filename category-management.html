@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Admin - Gestión de Categorías</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Página Admin Café</h1>
+            <a href="login.html" class="logout-btn">Cerrar Sesión</a>
+        </header>
+        
+        <div class="admin-layout">
+            <aside class="sidebar">
+                <nav class="menu">
+                    <div class="menu-item">
+                        <a href="index.html">Gestión de Usuarios</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="product-management.html">Gestión de Productos</a>
+                    </div>
+                    <div class="menu-item active">
+                        <a href="category-management.html">
+                            <span class="arrow">></span>
+                            Gestión de Categorías
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="order-config.html">Configuración de Pedidos</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="sales-reports.html">Ventas e Informes</a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <main class="content-area">
+                <div class="category-management-content">
+                    <div class="content-header">
+                        <h2>GESTIÓN DE CATEGORÍAS</h2>
+                        <button class="btn btn-primary add-category-btn">+ Añadir Categoría</button>
+                    </div>
+                    
+                    <div class="category-list">
+                        <div class="category-item">
+                            <div class="category-icon">☕</div>
+                            <div class="category-info">
+                                <span class="category-name">Bebidas calientes</span>
+                            </div>
+                            <a href="#edit-cafe" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                        </div>
+
+                        <div class="category-item">
+                            <div class="category-icon">🥤</div>
+                            <div class="category-info">
+                                <span class="category-name">Bebidas frias</span>
+                            </div>
+                            <a href="#edit-te" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                        </div>
+
+                        <div class="category-item">
+                            <div class="category-icon">🍰</div>
+                            <div class="category-info">
+                                <span class="category-name">Postres</span>
+                            </div>
+                            <a href="#edit-tarta" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="edit-cafe" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar Categoría: Bebidas calientes</h3>
+            <label>Nuevo nombre</label>
+            <input type="text" placeholder="Introduce el nuevo nombre">
+            <label>Imagen</label>
+            <input type="file">
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary edit-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary add-category-btn">Guardar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-te" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar Categoría: Bebidas frias</h3>
+            <label>Nuevo nombre</label>
+            <input type="text" placeholder="Introduce el nuevo nombre">
+            <label>Imagen</label>
+            <input type="file">
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary edit-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary add-category-btn">Guardar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-tarta" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar Categoría: Postres</h3>
+            <label>Nuevo nombre</label>
+            <input type="text" placeholder="Introduce el nuevo nombre">
+            <label>Imagen</label>
+            <input type="file">
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary edit-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary add-category-btn">Guardar</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">Página diseñada y realizada por NeburixCorp(tm)</footer>
+</body>
+</html>
