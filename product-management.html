@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,14 @@
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/tables.css">
 </head>
+
 <body>
     <div class="admin-container">
         <header class="admin-header">
             <h1>Página Admin Café</h1>
             <a href="login.html" class="logout-btn">Cerrar Sesión</a>
         </header>
-        
+
         <div class="admin-layout">
             <aside class="sidebar">
                 <nav class="menu">
@@ -59,12 +61,11 @@
                             <button class="btn btn-secondary search-btn">🔍</button>
                         </div>
                     </div>
-                    
+
                     <div class="user-table-container">
                         <table class="user-table">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>NOMBRE</th>
                                     <th>PRECIO</th>
                                     <th>CATEGORÍA</th>
@@ -73,53 +74,50 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td></td>
                                     <td>Café</td>
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Bebidas calientes</td>
                                     <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                        <a href="#edit-cafe" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-cafe" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
                                     <td>Té</td>
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Bebidas calientes</td>
                                     <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                        <a href="#edit-te" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-te" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
                                     <td>Tarta</td>
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Varios</td>
                                     <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                        <a href="#edit-tarta" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-tarta" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
                                     <td>Croissant</td>
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Croissants</td>
                                     <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                        <a href="#edit-croissant" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-croissant"
+                                            class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td></td>
                                     <td>Magdalena</td>
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Varios</td>
                                     <td>
-                                        <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
-                                        <button class="btn btn-sm btn-secondary remove-btn">ELIMINAR</button>
+                                        <a href="#edit-magdalena" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#delete-magdalena"
+                                            class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -129,9 +127,142 @@
             </main>
         </div>
     </div>
-    
+
+    <div id="edit-cafe" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar datos</h3>
+
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre">
+
+            <label>Categoría</label>
+            <input type="text" placeholder="Categoría">
+
+            <div class="modal-actions">
+                <a href="#" class="btn cancel-btn">Cancelar</a>
+                <button class="btn save-category-btn">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div id="edit-te" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar datos</h3>
+
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre">
+
+            <label>Categoría</label>
+            <input type="text" placeholder="Categoría">
+
+            <div class="modal-actions">
+                <a href="#" class="btn cancel-btn">Cancelar</a>
+                <button class="btn save-category-btn">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div id="edit-tarta" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar datos</h3>
+
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre">
+
+            <label>Categoría</label>
+            <input type="text" placeholder="Categoría">
+
+            <div class="modal-actions">
+                <a href="#" class="btn cancel-btn">Cancelar</a>
+                <button class="btn save-category-btn">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div id="edit-croissant" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar datos</h3>
+
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre">
+
+            <label>Categoría</label>
+            <input type="text" placeholder="Categoría">
+
+            <div class="modal-actions">
+                <a href="#" class="btn cancel-btn">Cancelar</a>
+                <button class="btn save-category-btn">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div id="edit-magdalena" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar datos</h3>
+
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre">
+
+            <label>Categoría</label>
+            <input type="text" placeholder="Categoría">
+
+            <div class="modal-actions">
+                <a href="#" class="btn cancel-btn">Cancelar</a>
+                <button class="btn save-category-btn">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="delete-cafe" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Café”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-primary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-secondary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    <div id="delete-te" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Té”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    <div id="delete-tarta" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Tarta”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    <div id="delete-croissant" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Croissant”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+    <div id="delete-magdalena" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Magdalena”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+
     <footer class="site-footer">
         Página diseñada y realizada por NeburixCorp(tm)
     </footer>
 </body>
+
 </html>
