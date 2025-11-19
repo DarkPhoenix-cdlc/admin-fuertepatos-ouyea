@@ -85,10 +85,36 @@
     color: var(--color-primary);
 }
 
-.menu-item.active a {
+.menu-item.active > a {
     background-color: var(--color-primary);
     color: var(--color-white);
     font-weight: var(--font-weight-bold);
+}
+
+.menu-item.has-submenu {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: relative;
+    background-color: var(--color-cream);
+    border-left: 3px solid var(--color-primary);
+}
+
+.menu-item.has-submenu:hover .submenu,
+.menu-item.active .submenu {
+    display: block;
+}
+
+.submenu .menu-item a {
+    padding-left: calc(var(--space-md) * 2);
+    font-size: 0.95em;
+}
+
+.submenu .menu-item.active a {
+    background-color: var(--color-primary-light, rgba(111, 78, 55, 0.2));
+    color: var(--color-primary);
 }
 
 .arrow {

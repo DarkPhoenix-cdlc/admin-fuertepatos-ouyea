@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Admin Café</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="admin-styles.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/tables.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
     <div class="admin-container">
         <header class="admin-header">
             <h1>Página Admin Café</h1>
             <a href="login.html" class="logout-btn">Cerrar Sesión</a>
         </header>
-        
+
         <div class="admin-layout">
             <aside class="sidebar">
                 <nav class="menu">
@@ -26,49 +31,62 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="login.html">Login Admin</a>
-                    </div>
-                    <div class="menu-item">
                         <a href="product-management.html">Gestión de Productos</a>
                     </div>
                     <div class="menu-item">
-                        <a href="order-config.html">Configuración de Pedidos</a>
+                        <a href="category-management.html">Gestión de Categorías</a>
+                    </div>
+                    <div class="menu-item has-submenu">
+                        <a href="#">Configuración</a>
+                        <div class="submenu">
+                            <div class="menu-item">
+                                <a href="client-config.html">Config. Clientes</a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="admin-config.html">Config. Admin</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="menu-item">
                         <a href="sales-reports.html">Ventas e Informes</a>
                     </div>
                 </nav>
             </aside>
-            
+
             <main class="content-area">
                 <div class="user-management-content">
                     <div class="content-header">
-                        <h2>GESTIÓN DE USUARIOS</h2>
+                        <h2>GESTIÓN DE USUARIOS.</h2>
                         <div class="search-box">
+                            <!-- Botón que abre el modal Bootstrap -->
+                            <button type="button" class="search-btn" data-bs-toggle="modal" data-bs-target="#createUserModal">
+                                Crear Usuario
+                            </button>
                             <input type="text" placeholder="Buscar usuario..." class="search-input">
-                            <button class="btn btn-secondary search-btn">🔍</button>
+                            <button class="search-btn">🔍</button>
                         </div>
                     </div>
-                    
+
                     <div class="user-table-container">
                         <table class="user-table">
                             <thead>
-                                        <tr>
-                                            <th>NOMBRE</th>
-                                            <th>USUARIO</th>
-                                            <th>SALDO</th>
-                                            <th>ACCIONES</th>
-                                        </tr>
+                                <tr>
+                                    <th>NOMBRE</th>
+                                    <th>USUARIO</th>
+                                    <th>SALDO</th>
+                                    <th>ACCIONES</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Pepe Viyuela</td>
                                     <td>DrWorld@gmail.com</td>
-                                    <td>
-                                        <input type="number" value="25.50" class="balance-input" step="0.01">€
-                                    </td>
+                                    <td><button class="btn btn-sm btn-primary"
+                                            onclick="abrirHistorial('Pepe Viyuela')">11,24€</button></td>
                                     <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                        
+                                        <a href="#delete-pepe-viyuela" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -79,6 +97,7 @@
                                     </td>
                                     <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                        <a href="#delete-gerardo" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -89,6 +108,7 @@
                                     </td>
                                     <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                        <a href="#delete-fran-profe" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -99,6 +119,7 @@
                                     </td>
                                     <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                        <a href="#delete-obinax" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -109,6 +130,7 @@
                                     </td>
                                     <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                        <a href="#delete-fizzero" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -119,51 +141,133 @@
                                     </td>
                                     <td>
                                         <button class="btn btn-sm btn-secondary edit-btn">EDITAR</button>
+                                        <a href="#delete-mangofresco" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    
-                    <!-- Panel Gestión Avanzada de Clientes -->
-                    <div class="client-management-panel">
-                        <h3>👥 Gestión Avanzada de Clientes</h3>
-                        <div class="client-action-group">
-                            <div class="client-action-item">
-                                <label for="customer-search">Buscar cliente:</label>
-                                <div class="customer-search">
-                                    <input type="text" id="customer-search" placeholder="Email o nombre" class="customer-input">
-                                    <button class="btn btn-secondary search-customer-btn">🔍 Buscar</button>
-                                </div>
-                            </div>
-                            
-                            <div class="client-action-item">
-                                <button class="btn btn-secondary quick-action-btn">📊 Ver Historial de Compras</button>
-                            </div>
-                            
-                            <!-- Recuadro de 'Gestionar Saldo' eliminado por ser redundante -->
-                            
-                            <div class="client-action-item">
-                                <button class="btn btn-secondary quick-action-btn">📧 Enviar Notificación</button>
-                            </div>
-                            
-                            <div class="client-action-item">
-                                <label>Exportar datos de clientes:</label>
-                                <div class="export-options">
-                                    <select class="export-select">
-                                        <option value="all">Todos los clientes</option>
-                                        <option value="active">Solo activos</option>
-                                        <option value="inactive">Solo inactivos</option>
-                                    </select>
-                                    <button class="btn btn-primary export-btn">📥 Exportar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </main>
         </div>
+    </div>
+
+    <div id="delete-pepe-viyuela" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Pepe Viyuela”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <br>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
         </div>
-        <footer class="site-footer">Página diseñada y realizada por NeburixCorp(tm)</footer>
+    </div>
+    
+    <div id="delete-gerardo" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Gerardo”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <br>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="delete-fran-profe" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Fran profe”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <br>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="delete-obinax" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Obinax”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <br>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="delete-fizzero" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Fizzero”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <br>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="delete-mangofresco" class="modal-overlay">
+        <div class="modal-box">
+            <h3>¿Eliminar “Mangofresco”?</h3>
+            <p>Esta acción no se puede deshacer.</p>
+            <br>
+            <div class="modal-actions">
+                <a href="#" class="btn btn-secondary cancel-btn">Cancelar</a>
+                <a href="#" class="btn btn-primary delete-category-btn">Eliminar</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">Página diseñada y realizada por NeburixCorp(tm)</footer>
+  <!-- Modal Bootstrap -->
+  <div class="modal fade" id="createUserModal" tabindex="-1" aria-labelledby="createUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createUserModalLabel">Crear Usuario</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre:</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="apellidos" class="form-label">Apellidos:</label>
+              <input type="text" class="form-control" id="apellidos" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- Botones con tus clases personalizadas -->
+            <button type="submit" class="create-btn">Crear</button>
+          <button type="button" class="cancel-btn" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script>
+        function abrirHistorial(usuario) {
+            // Abrimos purchase-history.html pasando el usuario como parámetro
+            window.open('purchase-history.html?usuario=' + encodeURIComponent(usuario), '_blank', 'width=1000,height=800,scrollbars=yes');
+        }
+    </script>
+
+</body>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

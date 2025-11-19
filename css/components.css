@@ -84,6 +84,52 @@
     box-shadow: 0 0 5px rgba(111, 78, 55, 0.3);
 }
 
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-overlay:target {
+    display: flex;
+}
+
+.modal-box {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius-lg);
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.modal-box h3 {
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.modal-box label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--color-gray-dark);
+}
+
+.modal-box input[type="text"],
+.modal-box input[type="file"] {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.6rem;
+    border: 1px solid var(--color-gray-light);
+    border-radius: var(--border-radius);
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -95,6 +141,62 @@
     font-weight: var(--font-weight-bold);
     color: var(--color-gray);
     font-size: var(--font-size-sm);
+}
+
+.config-input,
+.config-select,
+.config-textarea,
+.config-time,
+.date-input,
+#order-detail {
+    border: 2px solid #E0E0E0;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #FFFFFF;
+    max-width: 300px;
+}
+
+.config-time,
+.config-input,
+.date-input,
+#order-detail{
+    height: 30px;
+    resize: vertical
+}
+
+.config-input,
+#order-detail{
+    padding-left: 10px;
+}
+
+.config-select,
+.config-textarea{
+    padding: 10px 12px;
+}
+
+.config-select{
+    height: 40px;
+}
+
+.config-textarea{
+    height: 70px;
+}
+
+.config-input:focus,
+.config-select:focus,
+.config-textarea:focus,
+.config-time:focus,
+.date-input:focus,
+#order-detail:focus {
+    outline: none;
+    border-color: #6F4E37;
+    box-shadow: 0 0 5px rgba(111, 78, 55, 0.3);
+}
+
+.config-textarea {
+    resize: vertical;
+    max-width: 500px;
+    font-family: Arial, sans-serif;
 }
 
 /* ===== CHECKBOXES PERSONALIZADOS ===== */
