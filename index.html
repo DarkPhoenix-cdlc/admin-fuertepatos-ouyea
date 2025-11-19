@@ -56,7 +56,7 @@
             <main class="content-area">
                 <div class="user-management-content">
                     <div class="content-header">
-                        <h2>GESTIÓN DE USUARIOS</h2>
+                        <h2>GESTIÓN DE USUARIOS.</h2>
                         <div class="search-box">
                             <!-- Botón que abre el modal Bootstrap -->
                             <button type="button" class="search-btn" data-bs-toggle="modal" data-bs-target="#createUserModal">
@@ -236,10 +236,6 @@
         <div class="modal-body">
           <form>
             <div class="mb-3">
-              <label for="id" class="form-label">ID:</label>
-              <input type="text" class="form-control" id="id" required>
-            </div>
-            <div class="mb-3">
               <label for="nombre" class="form-label">Nombre:</label>
               <input type="text" class="form-control" id="nombre" required>
             </div>
@@ -255,8 +251,8 @@
         </div>
         <div class="modal-footer">
           <!-- Botones con tus clases personalizadas -->
-          <button type="button" class="search-btn" data-bs-dismiss="modal">Cancelar</button>
-          <button type="submit" class="search-btn">Crear</button>
+            <button type="submit" class="create-btn">Crear</button>
+          <button type="button" class="cancel-btn" data-bs-dismiss="modal">Cancelar</button>
         </div>
       </div>
     </div>
