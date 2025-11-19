@@ -78,7 +78,7 @@
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Bebidas calientes</td>
                                     <td>
-                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#edit-cafe" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
                                         <a href="#delete-cafe" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
@@ -87,7 +87,7 @@
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Bebidas calientes</td>
                                     <td>
-                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#edit-te" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
                                         <a href="#delete-te" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
@@ -96,7 +96,7 @@
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Varios</td>
                                     <td>
-                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#edit-tarta" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
                                         <a href="#delete-tarta" class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
                                 </tr>
@@ -105,7 +105,7 @@
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Croissants</td>
                                     <td>
-                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#edit-croissant" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
                                         <a href="#delete-croissant"
                                             class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
@@ -115,7 +115,7 @@
                                     <td><input type="number" value="1.50" class="balance-input" step="0.01">€</td>
                                     <td>Varios</td>
                                     <td>
-                                        <a class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
+                                        <a href="#edit-magdalena" class="btn btn-sm btn-secondary edit-btn">EDITAR</a>
                                         <a href="#delete-magdalena"
                                             class="btn btn-sm btn-secondary remove-btn">ELIMINAR</a>
                                     </td>
@@ -127,6 +127,88 @@
             </main>
         </div>
     </div>
+
+    <div id="edit-cafe" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar datos</h3>
+
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre">
+
+            <label>Categoría</label>
+            <input type="text" placeholder="Categoría">
+
+            <div class="modal-actions">
+                <a href="#" class="btn cancel-btn">Cancelar</a>
+                <button class="btn save-category-btn">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div id="edit-te" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar datos</h3>
+
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre">
+
+            <label>Categoría</label>
+            <input type="text" placeholder="Categoría">
+
+            <div class="modal-actions">
+                <a href="#" class="btn cancel-btn">Cancelar</a>
+                <button class="btn save-category-btn">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div id="edit-tarta" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar datos</h3>
+
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre">
+
+            <label>Categoría</label>
+            <input type="text" placeholder="Categoría">
+
+            <div class="modal-actions">
+                <a href="#" class="btn cancel-btn">Cancelar</a>
+                <button class="btn save-category-btn">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div id="edit-croissant" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar datos</h3>
+
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre">
+
+            <label>Categoría</label>
+            <input type="text" placeholder="Categoría">
+
+            <div class="modal-actions">
+                <a href="#" class="btn cancel-btn">Cancelar</a>
+                <button class="btn save-category-btn">Guardar</button>
+            </div>
+        </div>
+    </div>
+    <div id="edit-magdalena" class="modal-overlay">
+        <div class="modal-box">
+            <h3>Editar datos</h3>
+
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre">
+
+            <label>Categoría</label>
+            <input type="text" placeholder="Categoría">
+
+            <div class="modal-actions">
+                <a href="#" class="btn cancel-btn">Cancelar</a>
+                <button class="btn save-category-btn">Guardar</button>
+            </div>
+        </div>
+    </div>
+
     <div id="delete-cafe" class="modal-overlay">
         <div class="modal-box">
             <h3>¿Eliminar “Café”?</h3>
